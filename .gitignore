@@ -1,1 +1,14 @@
+# python stuff
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
 .venv
+venv
+
+# django stuff
+db.sqlite3
+media/
+
+# macos stuff
+.DS_Store
