@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "python",
+            "request": "launch",
+            "name": "Django app",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "runserver",
+                "--noreload"
+            ],
+            "django": true,
+            "justMyCode": false
+        }
+    ]
+}
