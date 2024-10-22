@@ -1,0 +1,25 @@
+
+{% load unicorn %}
+<html>
+<head>
+        {% unicorn_scripts %}
+</head>
+<div unicorn:view>
+    <button class="btn" unicorn:click="load">load</button>
+    <div class="form-control mb-4">
+        <input unicorn:model.defer="resource.name"></input>
+        {{ resource.name }}
+        <label for="edit_resource_type" class="label">
+            <span class="label-text">Resource Type:</span>
+        </label>
+        <select id="edit_resource_type" id="resource" unicorn:model.defer="resource.type" required
+            class="select select-bordered w-full">
+            <option value="">Select a type</option>
+            {% for type in resource_types %}
+            <option value="{{ type.pk }}">{{ type.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button class="btn" unicorn:click="save">save</button>
+</div>
+</html>
